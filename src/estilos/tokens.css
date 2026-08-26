@@ -1,0 +1,31 @@
+:root {
+  --bg:          #0B0E14;
+  --creme:       #FFF3E0;
+  --muted:       #C2B8C0;
+
+  --p1:          #22D3EE;
+  --p1-bg:       #072A33;
+  --p1-check:    #0A333E;
+  --p1-glow:     rgba(34, 211, 238, .22);
+
+  --p2:          #FF3D9A;
+  --p2-bg:       #2C0A20;
+  --p2-check:    #360D27;
+  --p2-glow:     rgba(255, 61, 154, .22);
+
+  --queijo:      #F5B93E;
+  --casca:       #C97B2C;
+  --calabresa:   #A82419;
+
+  --ouro:        #F5C842;
+  --ouro-escuro: #C9932C;
+  --texto-botao: #3A2408;
+
+  --div-bg:      #1A1620;
+  --div-linha:   #39303F;
+
+  --check-neutro: #11151E;
+  --quadro: 65px;
+
+  --estrela: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 1L14.7 8.28L22.46 8.6L16.37 13.42L18.47 20.9L12 16.6L5.53 20.9L7.63 13.42L1.54 8.6L9.3 8.28Z'/%3E%3C/svg%3E");
+}
