@@ -1,0 +1,76 @@
+.tela--inicio { justify-content: space-between; }
+
+.inicio__topo { text-align: center; padding-top: 40px; }
+
+.inicio__titulo {
+  font-family: 'Luckiest Guy', 'Fredoka', sans-serif;
+  font-weight: 400;
+  font-size: clamp(40px, 14vw, 56px);
+  letter-spacing: 2px;
+  line-height: 1.1;
+  color: var(--creme);
+}
+
+.inicio__subtitulo {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--muted);
+}
+
+.inicio__pizza { width: min(52vw, 200px); }
+.inicio__pizza svg { display: block; width: 100%; height: auto; }
+
+.fichas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  max-width: 380px;
+}
+
+.ficha {
+  border: 3px solid var(--cor);
+  background: var(--cor-fraca);
+  border-radius: 22px;
+  padding: 12px 10px 14px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.ficha--p1 { --cor: var(--p1); --cor-fraca: rgba(34, 211, 238, .10); }
+.ficha--p2 { --cor: var(--p2); --cor-fraca: rgba(255, 61, 154, .10); }
+
+.ficha__fatia { width: 32px; height: 34px; }
+.ficha__fatia svg { display: block; width: 100%; height: 100%; }
+
+.ficha__nome {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  text-align: center;
+  font-family: 'Luckiest Guy', 'Fredoka', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: var(--cor);
+  padding: 2px 0;
+  -webkit-user-select: text;
+  user-select: text;
+}
+.ficha__nome:focus { outline: 2px solid var(--cor); outline-offset: 4px; border-radius: 8px; }
+
+.ficha__nome::placeholder {
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: 0;
+  color: var(--muted);
+  opacity: .75;
+}
+
+.ficha__dica { font-size: 11px; color: var(--muted); }
+
+.inicio__regra { font-size: 14px; font-weight: 500; letter-spacing: 1px; color: var(--muted); }
