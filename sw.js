@@ -1,4 +1,4 @@
-const CACHE = 'rodizio-v2';
+const CACHE = 'rodizio-v3';
 
 const CONCHA = [
   './',
