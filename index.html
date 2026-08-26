@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Rodízio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+<meta name="theme-color" content="#0B0E14">
+<meta name="description" content="Contador de fatias para duas pessoas num rodízio de pizza.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="ativos/icones/icone.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="ativos/icones/icone-192.png">
+<link rel="stylesheet" href="src/estilos/tokens.css">
+<link rel="stylesheet" href="src/estilos/fontes.css">
+<link rel="stylesheet" href="src/estilos/base.css">
+<link rel="stylesheet" href="src/estilos/botoes.css">
+<link rel="stylesheet" href="src/telas/inicio/inicio.css">
+<link rel="stylesheet" href="src/telas/contador/contador.css">
+<link rel="stylesheet" href="src/telas/resumo/resumo.css">
+</head>
+<body data-tela="inicio">
+
+<main class="tela tela--inicio xadrez" id="tela-inicio">
+  <header class="inicio__topo">
+    <h1 class="inicio__titulo">RODÍZIO</h1>
+    <p class="inicio__subtitulo">quem come mais, ganha</p>
+  </header>
+
+  <div class="inicio__pizza" id="pizza-inicio" aria-hidden="true"></div>
+
+  <div class="fichas">
+    <div class="ficha ficha--p1">
+      <div class="ficha__fatia" aria-hidden="true"></div>
+      <input class="ficha__nome" id="nome-0" type="text" inputmode="text"
+             autocomplete="off" autocapitalize="characters" spellcheck="false"
+             maxlength="12" placeholder="JOGADOR 1" aria-label="Nome do jogador 1">
+      <p class="ficha__dica">toque para dar um nome</p>
+    </div>
+    <div class="ficha ficha--p2">
+      <div class="ficha__fatia" aria-hidden="true"></div>
+      <input class="ficha__nome" id="nome-1" type="text" inputmode="text"
+             autocomplete="off" autocapitalize="characters" spellcheck="false"
+             maxlength="12" placeholder="JOGADOR 2" aria-label="Nome do jogador 2">
+      <p class="ficha__dica">toque para dar um nome</p>
+    </div>
+  </div>
+
+  <button class="botao-grande" id="btn-comecar">COMEÇAR</button>
+  <p class="inicio__regra">8 fatias = 1 pizza</p>
+</main>
+
+<main class="tela tela--contador" id="tela-contador">
+
+  <div class="metade metade--topo xadrez" id="metade-0" data-jogador="0"
+       role="button" tabindex="0">
+    <p class="metade__dica">toque para comer</p>
+    <div class="metade__centro">
+      <div class="metade__pizza" aria-hidden="true"></div>
+      <p class="metade__placar"></p>
+      <p class="metade__selo"><span class="metade__estrela" aria-hidden="true"></span><span class="metade__situacao"></span></p>
+    </div>
+    <div class="metade__rodape">
+      <p class="metade__nome"></p>
+      <button class="desfazer" data-jogador="0" aria-label="Tirar uma fatia do jogador 1">
+        <span class="desfazer__menos" aria-hidden="true"></span>
+        <span class="desfazer__fatia" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="divisoria">
+    <button class="encerrar" id="btn-encerrar">encerrar</button>
+  </div>
+
+  <div class="metade metade--baixo xadrez" id="metade-1" data-jogador="1"
+       role="button" tabindex="0">
+    <p class="metade__dica">toque para comer</p>
+    <div class="metade__centro">
+      <div class="metade__pizza" aria-hidden="true"></div>
+      <p class="metade__placar"></p>
+      <p class="metade__selo"><span class="metade__estrela" aria-hidden="true"></span><span class="metade__situacao"></span></p>
+    </div>
+    <div class="metade__rodape">
+      <button class="desfazer" data-jogador="1" aria-label="Tirar uma fatia do jogador 2">
+        <span class="desfazer__menos" aria-hidden="true"></span>
+        <span class="desfazer__fatia" aria-hidden="true"></span>
+      </button>
+      <p class="metade__nome"></p>
+    </div>
+  </div>
+
+</main>
+
+<main class="tela tela--resumo xadrez" id="tela-resumo">
+  <div class="trofeu" aria-hidden="true"></div>
+  <h2 class="resumo__nome" id="resumo-nome"></h2>
+  <p class="resumo__legenda" id="resumo-legenda">venceu o rodízio</p>
+  <div class="resumo__pizza" id="pizza-resumo" aria-hidden="true"></div>
+  <button class="botao-grande botao-grande--ouro" id="btn-de-novo">JOGAR DE NOVO</button>
+</main>
+
+<script type="module" src="src/app.js"></script>
+</body>
+</html>
